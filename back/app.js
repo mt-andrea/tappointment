@@ -3,10 +3,13 @@ const app = express()
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 const fs=require('fs')
+const cors = require('cors');
+app.use(cors());
+
 
 app.post('/save',(req,res)=>{
-    fs.writeFile('save.txt',[req.params.num],(err)=>{
-        if (err) throw err
+    fs.writeFile('save.txt',req.body.num,(err)=>{
+        if (err) res.send(err)
         console.log('Saved!')
       })
 })
