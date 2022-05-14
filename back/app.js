@@ -8,7 +8,7 @@ app.use(cors());
 
 
 app.post('/save',(req,res)=>{
-    fs.writeFile('save.txt',req.body.num,(err)=>{
+    fs.writeFile('save.txt',req.body,(err)=>{
         if (err) res.send(err)
         console.log('Saved!')
       })

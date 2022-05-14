@@ -43,7 +43,7 @@ export const Content = () => {
             headers: {
                 'Content-type': 'application/json;charset=utf-8'
             },
-            body: JSON.stringify({"num":result})
+            body: result
         })
         
         .then(setMessage("Result saved!"))
