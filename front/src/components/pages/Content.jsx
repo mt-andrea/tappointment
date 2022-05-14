@@ -31,7 +31,7 @@ export const Content = () => {
         }
         return tem
     }
-    let op = ['+', '-', '/', '*']
+    let op = ['+', '-', '/', '*','.']
 
     const res = (e) => {
         setResult(eval(expression.expression))
@@ -99,6 +99,9 @@ export const Content = () => {
                     onClick={read}
                     value='read'
                 />
+                <Button
+                onClick={clear}
+                value='clear' />
             </div>
             <p>{message}</p>
         </div>
